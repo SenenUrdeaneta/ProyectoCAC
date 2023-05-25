@@ -1,0 +1,500 @@
+/* Variables css  */
+:root {
+    --principal: #00FFFF;
+    --secundario: #7FFFD4;
+    --detalles: #F0FFFF;
+    --borde-mockup: 1px solid #000000;
+    --espacio-titulo: 0 0 5rem 0;
+}
+
+/* Estilos globales */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+    /* margin: 0; */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 2rem;
+    /* Tamaño de fuente standard para párrafo */
+    /* font-family: ;
+    color: ; */
+}
+
+a {
+    text-decoration: none;
+    /* Quita subrayado a los enlaces */
+}
+
+ul li {
+    list-style: none;
+    /*Quita estilos de las fuentes*/
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Estilos generales */
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.fondo {
+    background-color: #add8e6;
+    padding: 2rem 0;
+}
+
+/* Utilidades */
+
+.mockup {
+    border: var(--borde-mockup);
+}
+
+/* HEADER */
+
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.marca {
+    width: 25rem;
+    height: 8rem;
+    padding: 0 0 0 1rem;
+    background-color: blanchedalmond;
+}
+
+.navegacion {
+    padding: 1rem 0;
+}
+
+.navegacion a {
+    margin: 0 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(../img/prueba_fondo.png);
+    background-size: cover;
+    background-position: center center;
+    margin: 0 0 2rem 0;
+}
+
+/* FOOTER */
+
+.flex-footer {
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.caja-footer {
+    align-items: center;
+    text-align: center;
+    flex: 0 0 calc(33.3% - 2rem);
+    height: 35rem;
+
+
+}
+
+.iconos-contacto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.iconos-contacto li {
+    /* flex: 1; */
+    display: flex;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    padding: 0 0 2rem 0;
+    align-items: center;
+}
+
+.iconos-contacto li a {
+    font-size: 1.8rem;
+    padding: 0;
+    margin-left: 3rem;
+}
+
+/* .caja-footer h2 {
+    margin: 1.5rem;
+} */
+
+.links {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.links li {
+    text-align: center;
+    padding: 1.2rem 0;
+
+}
+
+.links li a {
+    font-size: 2rem;
+
+    color: #000000;
+}
+
+.logo {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.social {
+    margin: 3rem 0;
+}
+
+.social a {
+    margin: 2rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* 
+ICONOS FONTAWESOME
+
+https://fontawesome.com/icons/location-dot?f=classic&s=solid&sz=2xl 
+https://fontawesome.com/icons/mobile-screen-button?f=classic&s=solid&sz=2xl
+https://fontawesome.com/icons/envelope?f=classic&s=solid&sz=2xl
+
+https://fontawesome.com/icons/facebook?f=brands&s=solid&sz=2xl
+https://fontawesome.com/icons/twitter?f=brands&s=solid&sz=2xl
+https://fontawesome.com/icons/linkedin?f=brands&s=solid&sz=2xl
+https://fontawesome.com/icons/square-instagram?f=brands&s=solid&sz=2xl
+
+*/
+
+/* ---------------------------------------------------- NOSOTROS */
+
+.titulo-nosotros {
+    margin: var(--espacio-titulo);
+    text-align: center;
+}
+
+
+.areaimagen1 {
+    grid-area: imagen1;
+}
+
+.areaimagen2 {
+    grid-area: imagen2;
+}
+
+.areaimagen3 {
+    grid-area: imagen3;
+}
+
+.areacontenido1 {
+    grid-area: contenido1;
+}
+
+.areacontenido2 {
+    grid-area: contenido2;
+}
+
+.areacontenido3 {
+    grid-area: contenido3;
+}
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-areas:
+        "contenido1 imagen1"
+        "imagen2 contenido2"
+        "contenido3 imagen3 ";
+    grid-gap: 1rem;
+    grid-template-columns: 55% 45%;
+}
+
+.texto-elegirnos {
+    text-align: justify;
+    padding: 1rem;
+
+}
+
+.texto-elegirnos h2 {
+    text-align: center;
+}
+
+/* ---------------------------------------------------- SERVICIOS */
+
+.item1 {
+    grid-area: tituloServicio;
+    text-align: center;
+    margin: var(--espacio-titulo);
+
+}
+
+.item2 {
+    grid-area: desarrolloWeb;
+}
+
+.item3 {
+    grid-area: ecommerce;
+}
+
+.item4 {
+    grid-area: manteniemiento;
+}
+
+.item5 {
+    grid-area: disenioGrafico;
+}
+
+.item6 {
+    grid-area: posicionamiento;
+}
+
+.item7 {
+    grid-area: alojamientoWeb;
+}
+
+.contenedor-servicios {
+    display: grid;
+    grid-template-areas:
+        "tituloServicio tituloServicio tituloServicio"
+        "desarrolloWeb ecommerce manteniemiento"
+        "disenioGrafico posicionamiento alojamientoWeb";
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+
+
+.iconos {
+    width: 10rem;
+    height: auto;
+}
+
+.texto-servicios {
+    text-align: justify;
+    padding: 0 2.5rem;
+}
+
+/* ---------------------------------------------------- TRABAJOS */
+.titulo {
+    text-align: center;
+    margin: 2rem 0 5rem 0;
+}
+
+.contenedor-imagen img {
+    width: 90%;
+    height: 90%;
+    padding: .1rem;
+    background-color: #676565;
+    border-radius: .5rem;
+    box-shadow: .1rem .5rem .3rem rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-portfolio {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .contenedor-portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 5rem;
+    }
+}
+
+.grow img {
+    transition: 1s ease;
+    filter: grayscale(60%);
+}
+
+.grow img:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(0%);
+    transition: 1s ease;
+}
+.enlaces-trabajos{
+    text-decoration:underline;
+    color: #000000;
+    padding: 1.5rem 0 0 0;
+
+}
+/* ---------------------------------------------------- PRECIOS */
+.titulo-precios {
+    text-align: center;
+    margin: var(--espacio-titulo);
+}
+
+.contenedor-precios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+}
+
+.caja-precios {
+    width: auto;
+    padding: 15px;
+    background-color: #e1e1e1;
+    border-radius: 2rem;
+}
+
+.caja-precios h2,
+h3 {
+    text-align: center;
+}
+
+.opciones-precios {
+    text-align: justify;
+    padding: 1rem;
+}
+
+.opciones-precios label {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 0 0 0 1rem;
+}
+
+.texto-precios {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+    font-weight: bold;
+}
+
+.flex-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    text-align: center;
+    box-shadow: .1rem .1rem .8rem .5rem #0c0c0c33;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    padding:  2rem 5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 3rem 0 2rem 0;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #2373ac33;
+
+}
+
+
+.contenido-nosotros,
+.contenedor-portfolio {
+    padding: 0 0 2rem 0;
+}
+
+/* --------------------------------------------------------CONTACTO */
+.contain-padre{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+  } 
+  
+  .container-contacto {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      background-color: white;
+      padding: 10px 10px 10px 10px;
+      margin: 60px 60px 60px 60px; 
+  } 
+  
+  form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+      background-color: lightblue ; 
+      padding: 10px 10px 20px 20px;
+      margin: 10px 60px 10px 10px;
+      text-align: left;
+  }
+    
+  .contacts {
+    /* background:; */
+    text-align: justify;
+    padding: 20px 20px 20px 20px;
+    margin: 80px 80px 80px 80px;
+  }
+  
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid #000; 
+    }
+  
+    form label {
+      display: block;
+    }
+    form p {
+      margin: 10px;
+    }
+  
+    .full-width {
+      grid-column: 1 / 3;
+    }
+  
+    button {
+      background: rgb(99, 92, 107);
+      width: 50%;
+    }
+  
+    button:hover, button:focus {
+      background: rgb(45, 158, 196);
+      outline: 0;
+    }
+  
